@@ -3,72 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Green Earth Guardians</title>
-    <link rel="stylesheet" href="style.css">
+    <title>EcoPulse | Sustain the Future</title>
+    <style>
+        /* 基础样式与颜色渐变 */
+        :root {
+            --primary-green: #2d6a4f;
+            --light-green: #95d5b2;
+            --ocean-blue: #1a759f;
+            --soft-white: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #d8f3dc 0%, #caf0f8 100%);
+            background-attachment: fixed;
+        }
+
+        /* 导航栏 */
+        header {
+            background-color: rgba(45, 106, 79, 0.9);
+            color: white;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(5px);
+        }
+
+        header h1 { margin: 0; font-size: 1.5rem; }
+
+        /* 英雄版块 (Hero Section) */
+        .hero {
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                        url('https://images.unsplash.com');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero h2 { font-size: 3.5rem; margin-bottom: 1rem; }
+        .hero p { font-size: 1.2rem; max-width: 600px; }
+
+        /* 内容卡片区 */
+        .container {
+            padding: 4rem 10%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, border-top 0.3s ease;
+            border-top: 5px solid var(--primary-green);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-top: 5px solid var(--ocean-blue); /* 悬停颜色变化 */
+        }
+
+        .card h3 { color: var(--primary-green); }
+
+        /* 呼吁行动区 (CTA) */
+        .cta {
+            background: var(--primary-green);
+            color: white;
+            text-align: center;
+            padding: 4rem 2rem;
+            transition: background 1s ease;
+        }
+
+        .cta:hover {
+            background: var(--ocean-blue); /* 鼠标划过背景变色 */
+        }
+
+        .btn {
+            background: white;
+            color: var(--primary-green);
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .btn:hover {
+            background: #eee;
+            letter-spacing: 1px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+            background: #f1f1f1;
+        }
+    </style>
 </head>
 <body>
+
     <header>
-        <div class="container">
-            <h1>Green Earth Guardians</h1>
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#work">Our Work</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+        <h1>EcoPulse</h1>
+        <nav>
+            <span style="font-size: 0.9rem;">Protecting Our Planet</span>
+        </nav>
     </header>
 
-    <section id="home" class="hero">
-        <div class="container">
-            <h2>Protect Our Planet, Secure Our Future</h2>
-            <p>Join us in preserving our environment for generations to come.</p>
-            <a href="#work" class="btn">Learn How You Can Help</a>
-        </div>
+    <section class="hero">
+        <h2>Nature’s Future is Our Future</h2>
+        <p>Small steps lead to big changes. Join us in the movement to preserve the beauty of our Earth.</p>
     </section>
 
-    <section id="about">
-        <div class="container">
-            <h2>About Us</h2>
-            <p>Green Earth Guardians is a non-profit organization dedicated to promoting environmental awareness and taking action against pollution and climate change. We believe in collective responsibility and sustainable living.</p>
+    <div class="container">
+        <div class="card">
+            <h3>Reduce Waste</h3>
+            <p>Adopt a zero-waste lifestyle by choosing reusable products and minimizing single-use plastics in your daily routine.</p>
         </div>
-    </section>
+        <div class="card">
+            <h3>Renewable Energy</h3>
+            <p>Support the transition to solar, wind, and hydro energy to reduce our global carbon footprint and combat climate change.</p>
+        </div>
+        <div class="card">
+            <h3>Conserve Water</h3>
+            <p>Every drop counts. Simple actions like fixing leaks and using water-efficient appliances can save thousands of gallons per year.</p>
+        </div>
+    </div>
 
-    <section id="work" class="work-section">
-        <div class="container">
-            <h2>Our Work</h2>
-            <div class="work-items">
-                <div class="work-item">
-                    <h3>Reforestation</h3>
-                    <p>Planting trees to restore vital ecosystems and combat deforestation.</p>
-                </div>
-                <div class="work-item">
-                    <h3>Ocean Cleanup</h3>
-                    <p>Removing plastic and debris from our oceans to protect marine life.</p
-                </div>
-                <div class="work-item">
-                    <h3>Community Education</h3>
-                    <p>Raising awareness about recycling, reducing waste, and conserving energy.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <p>Get in touch to volunteer, donate, or learn more.</p
-            <p>Email: info@greenearthguardians.org</p>
-            <p>Phone: (123) 456-7890</p>
-        </div>
+    <section class="cta">
+        <h2>Ready to Make a Difference?</h2>
+        <p>Sign up for our weekly newsletter for eco-friendly tips and news.</p>
+        <br>
+        <a href="#" class="btn">Join the Movement</a>
     </section>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2026 Green Earth Guardians. All rights reserved.</p>
-         </div>
+        <p>&copy; 2026 EcoPulse Initiative. Let's grow a greener tomorrow.</p>
     </footer>
+
 </body>
 </html>
